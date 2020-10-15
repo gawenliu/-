@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char string[20][20];
+	int f[10];
+	int length=0,zimu=0,num=0,x=0,y=0,z=0;
+	while(length!=4)
+	{
+		printf("Enter word: ");
+		scanf("%s",string[x]);
+		length=strlen(string[x]);
+		x++;
+	} 
+	for(num=0;num<20;num++)
+	{
+	 for(zimu=0;zimu<26;zimu++)
+    	{
+		for(int y=0;y<x;y++)
+		{
+			if(string[y][num]=='a'+zimu)
+			{
+				f[z]=y;
+				z++;
+			}
+		 }
+		 if(z!=0)
+		 {
+		 	break;
+		 }
+	    }
+	    if(z==1)
+	    {
+	    	break;
+		}
+    }
+    length=strlen(string[y]);
+    printf("%s",string[y]);
+	return 0;
+ }
